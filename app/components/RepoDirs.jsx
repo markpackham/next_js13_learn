@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 async function fetchRepoContents(name) {
+  // creating a 3 second delay so a suspense boundary can be used in
+  // app\code\repos\[name]\page.jsx
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const response = await fetch(
     `https://api.github.com/repos/markpackham/${name}/contents`,
     {

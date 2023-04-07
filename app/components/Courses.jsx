@@ -8,7 +8,7 @@ import Link from "next/link";
 //   return courses;
 // }
 
-const Courses = async ({ courses }) => {
+const Courses = ({ courses }) => {
   // const courses = await fetchCourses();
   return (
     <div className="courses">

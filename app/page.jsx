@@ -15,11 +15,18 @@ const HomePage = () => {
       setCourses(data);
       setLoading(false);
     };
+
+    fetchCourses();
   }, []);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   return (
     <>
       <h1>Welcome to the Homepage</h1>
+      <Courses courses={courses} />
     </>
   );
 };

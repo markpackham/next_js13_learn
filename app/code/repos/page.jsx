@@ -6,6 +6,7 @@ async function fetchRepos() {
     "https://api.github.com/users/markpackham/repos",
     {
       next: {
+        // check every 60 seconds should the data have changed
         revalidate: 60,
       },
     }

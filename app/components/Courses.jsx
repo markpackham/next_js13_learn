@@ -1,13 +1,15 @@
 import Link from "next/link";
 
-async function fetchCourses() {
-  const response = await fetch("http://localhost:3000/api/courses");
-  const courses = await response.json();
-  return courses;
-}
+// If this was purely a Server component we would be doing the fetching in here
+// Instead we want it as a Client component so the feteching is done on the homepage
+// async function fetchCourses() {
+//   const response = await fetch("http://localhost:3000/api/courses");
+//   const courses = await response.json();
+//   return courses;
+// }
 
-const Courses = async () => {
-  const courses = await fetchCourses();
+const Courses = async ({ courses }) => {
+  // const courses = await fetchCourses();
   return (
     <div className="courses">
       {courses.map((course) => (

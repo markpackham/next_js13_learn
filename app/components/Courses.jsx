@@ -10,7 +10,7 @@ const Courses = async () => {
   const courses = await fetchCourses();
   return (
     <div className="courses">
-      {courses.map((course) => {
+      {courses.map((course) => (
         <div key={course.id} className="card">
           <h2>{course.title}</h2>
           <small>Level: {course.level}</small>
@@ -18,8 +18,8 @@ const Courses = async () => {
           <Link href={course.link} target="_blank" className="btn">
             Go to Course
           </Link>
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 };

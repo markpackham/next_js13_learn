@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Courses from "./components/Courses";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <h1>Welcome to the Homepage</h1>
       <ul>
         <li>
@@ -15,7 +16,9 @@ const HomePage = () => {
           <Link href="/about/team">Team</Link>
         </li>
       </ul>
-    </div>
+      <br />
+      <Courses />
+    </>
   );
 };
 export default HomePage;
